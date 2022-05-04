@@ -1,21 +1,121 @@
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+@font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
+}
 
+html, body{
+    margin: 0;
+    font-family: "AvenirNextLTPro";
+}
 
 .nav{
+        background-color: $primary-background;
+        width: 100%;
+        
+    &__logo{
+       
+        @include mobile{
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+        }
     
-    &__title{
-
     }
-    &__list{
+    &__image{
+        @include mobile{
+            height: 4vh;
+        }
+     
+    }
 
+    &__list{
+    
+        @include mobile{
+            display: flex;
+            padding: 0;
+            list-style: none;
+            margin-bottom: 0;
+            
+        }
+       
     }
     &__item{
+         color: $secondary-textColor;
+         text-decoration: none;
+         @include mobile{
+            width: 100%;
+            text-align: center;
+            padding-bottom: 0.7rem;
+         }
+        
+         &--active{
+            border-bottom: 3px solid $primary-textColor;
+            color: $primary-textColor;
+     
+         }
 
     }
 }
 
 .header{
+    color: $primary-textColor;
+    background-image: url(../Assets/Images/hero-bio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 
     &__title{
+        margin: 0;
+        display: flex;
+        height: 41vh;
+        align-items: center;
+        background-color: rgba(50, 50, 50, 0.5);
+        padding-left: 1rem;
+    }
+}
+
+.about{
+
+    &__title{
+
+    }
+    &__header{
+
+    }
+    &__image{
+
+    }
+    &__quote{
+
+    }
+    &__name{
+
+    }
+    &__bio{
+
+    }
+    &__subtitle{
+
+    }
+    &__paragraph{
+
+    }
+    &__text{
+
+    }
+}
+
+.photos{
+
+    &__title{
+
+    }
+    &__gallery{
+
+    }
+    &__images{
 
     }
 }
