@@ -1,6 +1,14 @@
-$mobile-breakpoint: 360px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
-$primary-background: #323232;
-$primary-textColor: #FFFFFF;
-$secondary-textColor: #AFAFAF;
+$primary-color: #323232;
+$secondary-textColor: #FFFFFF;
+$inactive: #AFAFAF;
+$mobile-headlinePadding: 1.5rem 1rem 1rem 1rem;
+$mobile-sidePadding: 0 1rem 0 1rem;
+$mobile-headerSize: 1.5rem;
+$mobile-headerHeight: 2rem;
+$mobile-bodySize: 0.81rem;
+$mobile-bodyHeight: 1.13rem;
+$desktop-headerSize: 3.75rem;
+
+$desktop-sectionSize: 2.25rem;

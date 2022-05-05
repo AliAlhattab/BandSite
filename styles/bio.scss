@@ -1,121 +1,243 @@
 @use "./partials/mixins" as *;
 @use "./partials/variables" as *;
-@font-face {
-    font-family: "AvenirNextLTPro";
-    src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
-}
+@use "./partials/fonts" as *;
 
 html, body{
     margin: 0;
-    font-family: "AvenirNextLTPro";
+    font-family: "AvenirNextLTPro-Regular";
 }
 
+// Start of Nav SCSS
 .nav{
-        background-color: $primary-background;
-        width: 100%;
-        
+        background-color: $primary-color;
+        @include tablet{
+            display: flex;  
+        }
+
     &__logo{
-       
-        @include mobile{
             padding-top: 1rem;
             display: flex;
             justify-content: center;
-        }
-    
+            @include tablet{
+                margin: 0 1rem 1rem 2.25rem;
+                align-items: center;
+            }
     }
+
     &__image{
-        @include mobile{
-            height: 4vh;
-        }
-     
+            height: 3vh;
+            
     }
 
     &__list{
-    
-        @include mobile{
             display: flex;
             padding: 0;
             list-style: none;
             margin-bottom: 0;
             
-        }
-       
+            @include tablet {
+                padding: 1rem 0 0 0;
+            }
     }
+
     &__item{
-         color: $secondary-textColor;
+         color: $inactive;
          text-decoration: none;
-         @include mobile{
             width: 100%;
             text-align: center;
             padding-bottom: 0.7rem;
-         }
+           
+            @include tablet{
+                margin: 0 1rem 0 2.25rem;
+              
+            }
         
          &--active{
-            border-bottom: 3px solid $primary-textColor;
-            color: $primary-textColor;
-     
-         }
+            border-bottom: 3px solid $secondary-textColor;
+            color: $secondary-textColor;
 
+            @include tablet {
+                padding-bottom: 2rem;
+            }
+            
+         }
     }
 }
 
+// Start of Header SCSS
 .header{
-    color: $primary-textColor;
+    color: $secondary-textColor;
     background-image: url(../Assets/Images/hero-bio.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    
+    height: 41vh;
+    background-color: rgba(50, 50, 50, 0.5);
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    background-position: center;
 
     &__title{
         margin: 0;
-        display: flex;
-        height: 41vh;
-        align-items: center;
-        background-color: rgba(50, 50, 50, 0.5);
         padding-left: 1rem;
+        font-size: $mobile-headerSize;
+        line-height: $mobile-headerHeight;
+
+        @include tablet{
+            font-size: $desktop-headerSize;
+        }
     }
 }
 
+// Start of About SCSS
 .about{
-
+    color: $primary-color;
     &__title{
+        font-family: "AvenirNextLTPro-demi";
+        padding: $mobile-headlinePadding;
+        margin: 0;
+        font-size: $mobile-headerSize;
+        line-height: $mobile-headerHeight;
 
+        @include tablet{
+            font-size: $desktop-sectionSize;
+
+        }
     }
+
     &__header{
-
+        padding: $mobile-sidePadding;
     }
+
     &__image{
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    &__quote{
+        color: $primary-color;
+        font-family: "AvenirNextLTPro-Demi";
+        padding: $mobile-sidePadding;
+        margin: 0;
+        font-size: $mobile-bodySize;
+        line-height: $mobile-bodyHeight;
+    }
+
+    &__name{
+        font-family: "AvenirNextLTPro-Demi";
+        padding: $mobile-sidePadding;
+        padding-top: 1rem;
+        margin: 0;
+        font-size: $mobile-bodySize;
+        line-height: $mobile-bodyHeight;
+    }
+
+    &__bio{
+    }
+
+    &__subtitle{
+        padding: $mobile-headlinePadding;
+        margin: 0;
+        
+    }
+
+    &__paragraph{
+        padding: $mobile-sidePadding;
+    }
+
+    &__text{
+        margin-top: 0;
+        line-height: 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+// Start of Photos SCSS
+.photos{
+    background-color: #FAFAFA;
+    &__title{
+        font-family: "AvenirNextLTPro-Demi";
+        margin: 0;
+        padding: $mobile-headlinePadding;
+        font-size: $mobile-headerSize;
+        line-height: $mobile-headerHeight;
+    }
+    &__gallery{
+        padding: $mobile-sidePadding;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__images{
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+// Start of Footer SCSS
+.footer{
+    background-color: $primary-color;
+    color: $secondary-textColor;
+    
+    &__socials{
+        
+    }
+    &__contacts{
+        padding: $mobile-sidePadding;
+    }
+    &__copyright{
+        padding: 1rem;
+        margin: 0;
+        font-size: $mobile-bodySize;
+        line-height: $mobile-bodyHeight;
+    }
+    &__logo{
+        margin-top: 4rem;
+        padding: $mobile-sidePadding;
+    }
+}
+.socials{
+    &__title{
+        margin: 0;
+        padding: $mobile-headlinePadding;
+        font-size: $mobile-headerSize;
+        line-height: $mobile-bodyHeight;
+    }
+    &__images{
+        padding: $mobile-sidePadding;
+        margin-bottom: 1rem;
+    }
+}
+.contacts{
+    &__management{
+        
+    }
+    &__artist{
 
     }
-    &__quote{
+    &__entertainment{
 
     }
     &__name{
-
+        margin:0;
+        font-size: $mobile-bodySize;
+        line-height: $mobile-bodyHeight;
+        
     }
-    &__bio{
-
+    &__titles{
+        margin: 0 0 1.5rem 0;
+        font-size: $mobile-bodySize;
+        line-height: $mobile-bodyHeight;
+        
     }
-    &__subtitle{
-
+    &__info{
+        margin: 0;
+        font-size: $mobile-bodySize;
+        line-height: $mobile-bodyHeight;
+        
     }
-    &__paragraph{
-
+    &__email{
+        margin: 1.5rem 0 1.5rem 0;
+        font-size: $mobile-bodySize;
+        line-height: $mobile-bodyHeight;
     }
-    &__text{
-
-    }
-}
-
-.photos{
-
-    &__title{
-
-    }
-    &__gallery{
-
-    }
-    &__images{
-
-    }
+    
 }
