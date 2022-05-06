@@ -99,6 +99,7 @@ html, body{
         line-height: $mobile-headerHeight;
 
         @include tablet{
+            padding: $desktop-headlinePadding;
             font-size: $desktop-sectionSize;
 
         }
@@ -106,6 +107,10 @@ html, body{
 
     &__header{
         padding: $mobile-sidePadding;
+        
+        @include tablet{
+            padding: $desktop-sidePadding;
+        }
     }
 
     &__image{
@@ -116,7 +121,6 @@ html, body{
     &__quote{
         color: $primary-color;
         font-family: "AvenirNextLTPro-Demi";
-        padding: $mobile-sidePadding;
         margin: 0;
         font-size: $mobile-bodySize;
         line-height: $mobile-bodyHeight;
@@ -124,7 +128,6 @@ html, body{
 
     &__name{
         font-family: "AvenirNextLTPro-Demi";
-        padding: $mobile-sidePadding;
         padding-top: 1rem;
         margin: 0;
         font-size: $mobile-bodySize;
@@ -132,22 +135,40 @@ html, body{
     }
 
     &__bio{
+
+        padding: $mobile-sidePadding;
+        @include tablet{
+            padding: $desktop-sidePadding;
+        }
     }
 
     &__subtitle{
-        padding: $mobile-headlinePadding;
+        padding: 1.5rem 0 1rem 0;
         margin: 0;
+
+        @include tablet{
+            font-size: $desktop-subSize;
+            font-family: "AvenirNextLTPro-Demi";
+        }
         
     }
 
     &__paragraph{
-        padding: $mobile-sidePadding;
+
+       @include tablet{
+           display: flex;
+       }
     }
 
     &__text{
         margin-top: 0;
         line-height: 1.2rem;
         font-size: 0.8rem;
+
+        @include tablet{
+            width: 90%;
+            padding-right: 2.25rem;
+        }
     }
 }
 
@@ -160,15 +181,32 @@ html, body{
         padding: $mobile-headlinePadding;
         font-size: $mobile-headerSize;
         line-height: $mobile-headerHeight;
+
+        @include tablet{
+            padding: $desktop-headlinePadding;
+            font-size: $desktop-sectionSize;
+        }
     }
     &__gallery{
         padding: $mobile-sidePadding;
         display: flex;
         flex-wrap: wrap;
+        @include tablet {
+            padding: 0 2.25rem 0 2.25rem;
+        }
+        
+
     }
     &__images{
         width: 100%;
         padding-bottom: 1rem;
+
+        @include tablet{
+            justify-content: center;
+                width: 31%;
+                padding: 0 1rem 2.25rem 0;
+            
+        }
     }
 }
 
@@ -179,9 +217,19 @@ html, body{
     
     &__socials{
         
+        @include tablet{
+        display: flex;
+        align-items: center;
+        
+        }
     }
     &__contacts{
         padding: $mobile-sidePadding;
+
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        }
     }
     &__copyright{
         padding: 1rem;
@@ -200,10 +248,18 @@ html, body{
         padding: $mobile-headlinePadding;
         font-size: $mobile-headerSize;
         line-height: $mobile-bodyHeight;
+        
+        @include tablet{
+
+        }
     }
     &__images{
-        padding: $mobile-sidePadding;
-        margin-bottom: 1rem;
+        padding: 0 1rem 1rem 1rem;
+        
+        @include tablet{
+            padding-top: 1.5rem;
+            
+        }
     }
 }
 .contacts{
