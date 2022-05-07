@@ -105,7 +105,7 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .about__title {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    padding: 3rem 0 2.25rem 2.25rem;
     font-size: 2.25rem;
   }
 }
@@ -127,6 +127,12 @@ html, body {
   margin: 0;
   font-size: 0.81rem;
   line-height: 1.13rem;
+}
+@media screen and (min-width: 768px) {
+  .about__quote {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 .about__name {
   font-family: "AvenirNextLTPro-Demi";
@@ -182,7 +188,7 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .photos__title {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    padding: 3rem 0 2.25rem 2.25rem;
     font-size: 2.25rem;
   }
 }
@@ -225,6 +231,7 @@ html, body {
   .footer__contacts {
     display: flex;
     justify-content: space-between;
+    padding: 0 2rem 0 2rem;
   }
 }
 .footer__copyright {
@@ -233,9 +240,22 @@ html, body {
   font-size: 0.81rem;
   line-height: 1.13rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    padding-left: 2rem;
+  }
+}
 .footer__logo {
   margin-top: 4rem;
   padding: 0 1rem 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    position: relative;
+    bottom: 221px;
+    left: 595px;
+    margin: 0;
+  }
 }
 
 .socials__title {
@@ -243,6 +263,12 @@ html, body {
   padding: 1.5rem 1rem 1rem 1rem;
   font-size: 1.5rem;
   line-height: 1.13rem;
+}
+@media screen and (min-width: 768px) {
+  .socials__title {
+    font-size: 1.5rem;
+    padding: 3rem 1rem 2.25rem 2.25rem;
+  }
 }
 .socials__images {
   padding: 0 1rem 1rem 1rem;

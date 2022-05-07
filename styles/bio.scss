@@ -124,6 +124,12 @@ html, body{
         margin: 0;
         font-size: $mobile-bodySize;
         line-height: $mobile-bodyHeight;
+
+        @include tablet{
+            font-size: $desktop-subSize;
+            line-height: $desktop-subHeight;
+        }
+
     }
 
     &__name{
@@ -229,6 +235,7 @@ html, body{
         @include tablet{
             display: flex;
             justify-content: space-between;
+            padding: 0 2rem 0 2rem;
         }
     }
     &__copyright{
@@ -236,10 +243,21 @@ html, body{
         margin: 0;
         font-size: $mobile-bodySize;
         line-height: $mobile-bodyHeight;
+
+        @include tablet{
+            padding-left: 2rem;
+        }
     }
     &__logo{
         margin-top: 4rem;
         padding: $mobile-sidePadding;
+
+        @include tablet{
+        position: relative;
+        bottom: 221px;
+        left: 595px;
+        margin: 0;
+        }
     }
 }
 .socials{
@@ -250,7 +268,9 @@ html, body{
         line-height: $mobile-bodyHeight;
         
         @include tablet{
-
+            font-size: $desktop-subSize;
+            padding: 3rem 1rem 2.25rem 2.25rem;
+            
         }
     }
     &__images{
