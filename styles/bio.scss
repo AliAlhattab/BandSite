@@ -18,9 +18,15 @@ html, body{
             padding-top: 1rem;
             display: flex;
             justify-content: center;
+            
             @include tablet{
                 margin: 0 1rem 1rem 2.25rem;
                 align-items: center;
+            }
+
+            @include desktop{
+                margin: 1rem 2rem 2rem 5rem;
+
             }
     }
 
@@ -36,8 +42,13 @@ html, body{
             margin-bottom: 0;
             
             @include tablet {
-                padding: 1rem 0 0 0;
+                padding-top: 1rem;
             }
+            @include desktop{
+                margin-top: 1.5rem;
+
+            }
+            
     }
 
     &__item{
@@ -84,6 +95,11 @@ html, body{
 
         @include tablet{
             font-size: $desktop-headerSize;
+            padding-left: 2.25rem;
+        }
+
+        @include desktop{
+            padding-left: 5rem;
         }
     }
 }
@@ -199,6 +215,7 @@ html, body{
         flex-wrap: wrap;
         @include tablet {
             padding: 0 2.25rem 0 2.25rem;
+            justify-content: center;
         }
         
 
@@ -249,14 +266,26 @@ html, body{
         }
     }
     &__logo{
+
+        @include tablet {
+            position: relative;
+            bottom: 17.75rem;
+            width:43.75rem;
+            margin-left: 43.75rem;
+        }
+        
+
+
+        
+    }
+    &__image{
         margin-top: 4rem;
         padding: $mobile-sidePadding;
 
         @include tablet{
-        position: relative;
-        bottom: 221px;
-        left: 595px;
-        margin: 0;
+            position: absolute;
+            
+       
         }
     }
 }

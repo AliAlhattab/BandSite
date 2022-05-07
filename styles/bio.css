@@ -34,6 +34,11 @@ html, body {
     align-items: center;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav__logo {
+    margin: 1rem 2rem 2rem 5rem;
+  }
+}
 .nav__image {
   height: 3vh;
 }
@@ -45,7 +50,12 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .nav__list {
-    padding: 1rem 0 0 0;
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__list {
+    margin-top: 1.5rem;
   }
 }
 .nav__item {
@@ -90,6 +100,12 @@ html, body {
 @media screen and (min-width: 768px) {
   .header__title {
     font-size: 3.75rem;
+    padding-left: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__title {
+    padding-left: 5rem;
   }
 }
 
@@ -200,6 +216,7 @@ html, body {
 @media screen and (min-width: 768px) {
   .photos__gallery {
     padding: 0 2.25rem 0 2.25rem;
+    justify-content: center;
   }
 }
 .photos__images {
@@ -245,16 +262,21 @@ html, body {
     padding-left: 2rem;
   }
 }
-.footer__logo {
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    position: relative;
+    bottom: 17.75rem;
+    width: 43.75rem;
+    margin-left: 43.75rem;
+  }
+}
+.footer__image {
   margin-top: 4rem;
   padding: 0 1rem 0 1rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__logo {
-    position: relative;
-    bottom: 221px;
-    left: 595px;
-    margin: 0;
+  .footer__image {
+    position: absolute;
   }
 }
 
