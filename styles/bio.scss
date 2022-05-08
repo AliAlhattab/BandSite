@@ -52,26 +52,31 @@ html, body{
     }
 
     &__item{
-         color: $inactive;
-         text-decoration: none;
-            width: 100%;
-            text-align: center;
-            padding-bottom: 0.7rem;
-           
+        color: $inactive;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 0.7rem;
+
             @include tablet{
                 margin: 0 1rem 0 2.25rem;
-              
             }
         
          &--active{
             border-bottom: 3px solid $secondary-textColor;
             color: $secondary-textColor;
+            font-weight: bold;
+            
 
             @include tablet {
                 padding-bottom: 2rem;
             }
             
          }
+    }
+    &__item:hover{
+        border-bottom: 3px solid $secondary-textColor;
+        color: $secondary-textColor;
     }
 }
 
@@ -80,7 +85,7 @@ html, body{
     color: $secondary-textColor;
     background-image: url(../Assets/Images/hero-bio.jpg);
     background-size: cover;
-    height: 41vh;
+    height: 100vh;
     background-color: rgba(50, 50, 50, 0.5);
     background-blend-mode: overlay;
     display: flex;
@@ -165,6 +170,10 @@ html, body{
         line-height: $mobile-bodyHeight;
     }
 
+    @include desktop{
+        font-size: 14px;
+    }
+
     &__bio{
 
         margin: $mobile-sidePadding;
@@ -203,6 +212,11 @@ html, body{
         @include tablet{
             width: 90%;
             padding-right: 2.25rem;
+        }
+
+        @include desktop{
+            font-size: 14px;
+            line-height: 22px;
         }
     }
 }
@@ -269,6 +283,10 @@ html, body{
         align-items: center;
         
         }
+
+        @include desktop{
+            padding-left: 5rem;
+        }
     }
     &__contacts{
         padding: $mobile-sidePadding;
@@ -277,6 +295,11 @@ html, body{
             display: flex;
             justify-content: space-between;
             padding: 0 2rem 0 2rem;
+        }
+
+        @include desktop{
+            padding-left: 5rem;
+            width: 50%;
         }
     }
     &__copyright{
@@ -287,6 +310,10 @@ html, body{
 
         @include tablet{
             padding-left: 2rem;
+        }
+
+        @include desktop{
+            padding-left: 5rem;
         }
     }
     &__logo{
@@ -319,6 +346,9 @@ html, body{
             font-size: $desktop-subSize;
             padding: 3rem 1rem 2.25rem 2.25rem;
             
+        }
+        @include desktop{
+            padding: 3rem 1rem 2.25rem 0rem;
         }
     }
     &__images{
