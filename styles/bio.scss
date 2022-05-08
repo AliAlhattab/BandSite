@@ -119,13 +119,22 @@ html, body{
             font-size: $desktop-sectionSize;
 
         }
+        
+        @include desktop{
+            margin-left: 5rem;
+            
+        }
     }
 
     &__header{
-        padding: $mobile-sidePadding;
+        margin: $mobile-sidePadding;
         
         @include tablet{
-            padding: $desktop-sidePadding;
+            margin: $desktop-sidePadding;
+        }
+       
+        @include desktop{
+            margin: 0 10rem 0 10rem;
         }
     }
 
@@ -158,9 +167,13 @@ html, body{
 
     &__bio{
 
-        padding: $mobile-sidePadding;
+        margin: $mobile-sidePadding;
         @include tablet{
-            padding: $desktop-sidePadding;
+           margin: $desktop-sidePadding;
+        }
+
+        @include desktop{
+            margin: 0 10rem 0 10rem;
         }
     }
 
@@ -208,6 +221,10 @@ html, body{
             padding: $desktop-headlinePadding;
             font-size: $desktop-sectionSize;
         }
+        
+        @include desktop{
+            margin-left: 5rem;
+        }
     }
     &__gallery{
         padding: $mobile-sidePadding;
@@ -215,9 +232,12 @@ html, body{
         flex-wrap: wrap;
         @include tablet {
             padding: 0 2.25rem 0 2.25rem;
-            justify-content: center;
+            justify-content: space-between;
         }
         
+        @include desktop{
+            margin: 0 5rem 0 5rem;
+        }
 
     }
     &__images{
@@ -227,8 +247,12 @@ html, body{
         @include tablet{
             justify-content: center;
                 width: 31%;
-                padding: 0 1rem 2.25rem 0;
+                padding-bottom: 2.25rem ;
             
+        }
+        @include desktop{
+            width: 31%;
+            padding-bottom: 2.25rem ;
         }
     }
 }
@@ -270,13 +294,8 @@ html, body{
         @include tablet {
             position: relative;
             bottom: 17.75rem;
-            width:43.75rem;
-            margin-left: 43.75rem;
-        }
-        
-
-
-        
+            margin-left: 80%;
+        }        
     }
     &__image{
         margin-top: 4rem;
@@ -284,7 +303,7 @@ html, body{
 
         @include tablet{
             position: absolute;
-            
+ 
        
         }
     }
