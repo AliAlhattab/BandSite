@@ -40,7 +40,7 @@ html, body {
   }
 }
 .nav__image {
-  height: 3vh;
+  height: 1.25rem;
 }
 .nav__list {
   display: flex;
@@ -64,9 +64,12 @@ html, body {
   width: 100%;
   text-align: center;
   padding-bottom: 0.7rem;
+  font-size: 0.63rem;
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .nav__item {
+    font-size: 0.75rem;
     margin: 0 1rem 0 2.25rem;
   }
 }
@@ -89,54 +92,61 @@ html, body {
   color: #FFFFFF;
   background-image: url(../Assets/Images/hero-bio.jpg);
   background-size: cover;
-  height: 100vh;
+  height: 41vh;
   background-color: rgba(50, 50, 50, 0.5);
   background-blend-mode: overlay;
   display: flex;
   align-items: center;
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    height: 70vh;
+  }
+}
 .header__title {
-  margin: 0;
-  padding-left: 1rem;
+  margin-left: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
   .header__title {
     font-size: 3.75rem;
-    padding-left: 2.25rem;
+    margin-left: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__title {
-    padding-left: 5rem;
+    margin-left: 5rem;
   }
 }
 
 .about {
   color: #323232;
+  margin: 0 1rem 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    margin: 0;
+  }
 }
 .about__title {
   font-family: "AvenirNextLTPro-demi";
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1.5rem 0 1rem 0;
   margin: 0;
   font-size: 1.5rem;
-  line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
   .about__title {
-    padding: 3rem 0 2.25rem 2.25rem;
+    padding: 3rem 0 2.25rem 0;
     font-size: 2.25rem;
+    margin-left: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__title {
     margin-left: 5rem;
   }
-}
-.about__header {
-  margin: 0 1rem 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .about__header {
@@ -172,13 +182,10 @@ html, body {
   font-size: 0.81rem;
   line-height: 1.13rem;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .about__name {
-    font-size: 14px;
+    font-size: 0.88rem;
   }
-}
-.about__bio {
-  margin: 0 1rem 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .about__bio {
@@ -218,25 +225,32 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .about__text {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.88rem;
+    line-height: 1.38rem;
   }
 }
 
 .photos {
   background-color: #FAFAFA;
+  margin: 0 1rem 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .photos {
+    margin: 0 0 0.5rem 0;
+  }
 }
 .photos__title {
   font-family: "AvenirNextLTPro-Demi";
   margin: 0;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1.5rem 0 1rem 0;
   font-size: 1.5rem;
   line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
   .photos__title {
-    padding: 3rem 0 2.25rem 2.25rem;
+    padding: 3rem 0 2.25rem 0;
     font-size: 2.25rem;
+    margin-left: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -245,13 +259,12 @@ html, body {
   }
 }
 .photos__gallery {
-  padding: 0 1rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .photos__gallery {
-    padding: 0 2.25rem 0 2.25rem;
+    margin: 0 2.25rem 0 2.25rem;
     justify-content: space-between;
   }
 }
@@ -268,7 +281,7 @@ html, body {
   .photos__images {
     justify-content: center;
     width: 31%;
-    padding-bottom: 2.25rem;
+    padding-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -281,6 +294,12 @@ html, body {
 .footer {
   background-color: #323232;
   color: #FFFFFF;
+  padding: 0 1rem 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer__socials {
@@ -293,14 +312,11 @@ html, body {
     padding-left: 5rem;
   }
 }
-.footer__contacts {
-  padding: 0 1rem 0 1rem;
-}
 @media screen and (min-width: 768px) {
   .footer__contacts {
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem 0 2rem;
+    padding: 0 2.25rem 0 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -310,19 +326,17 @@ html, body {
   }
 }
 .footer__copyright {
-  padding: 1rem;
   margin: 0;
   font-size: 0.81rem;
-  line-height: 1.13rem;
 }
 @media screen and (min-width: 768px) {
   .footer__copyright {
-    padding-left: 2rem;
+    padding: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__copyright {
-    padding-left: 5rem;
+    padding: 2.25rem 0 2.25rem 5rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -334,7 +348,7 @@ html, body {
 }
 .footer__image {
   margin-top: 4rem;
-  padding: 0 1rem 0 1rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__image {
@@ -344,9 +358,8 @@ html, body {
 
 .socials__title {
   margin: 0;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1.5rem 0 1rem 0;
   font-size: 1.5rem;
-  line-height: 1.13rem;
 }
 @media screen and (min-width: 768px) {
   .socials__title {
@@ -360,11 +373,11 @@ html, body {
   }
 }
 .socials__images {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 2rem 2rem 0rem;
 }
 @media screen and (min-width: 768px) {
   .socials__images {
-    padding-top: 1.5rem;
+    padding: 1.7rem 1rem 1rem 1rem;
   }
 }
 
@@ -373,18 +386,42 @@ html, body {
   font-size: 0.81rem;
   line-height: 1.13rem;
 }
+@media screen and (min-width: 768px) {
+  .contacts__name {
+    font-size: 0.88rem;
+    line-height: 1.38rem;
+  }
+}
 .contacts__titles {
   margin: 0 0 1.5rem 0;
   font-size: 0.81rem;
   line-height: 1.13rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts__titles {
+    font-size: 0.88rem;
+    line-height: 1.38rem;
+  }
 }
 .contacts__info {
   margin: 0;
   font-size: 0.81rem;
   line-height: 1.13rem;
 }
+@media screen and (min-width: 768px) {
+  .contacts__info {
+    font-size: 0.88rem;
+    line-height: 1.38rem;
+  }
+}
 .contacts__email {
   margin: 1.5rem 0 1.5rem 0;
   font-size: 0.81rem;
   line-height: 1.13rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts__email {
+    font-size: 0.88rem;
+    line-height: 1.38rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

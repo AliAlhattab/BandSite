@@ -1,18 +1,26 @@
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
+
 $primary-color: #323232;
-$secondary-textColor: #FFFFFF;
+$primary-textColor: #FFFFFF;
 $inactive: #AFAFAF;
-$mobile-headlinePadding: 1.5rem 1rem 1rem 1rem;
+
+$mobile-headlinePadding: 1.5rem 0 1rem 0;
 $mobile-sidePadding: 0 1rem 0 1rem;
 $mobile-headerSize: 1.5rem;
 $mobile-headerHeight: 2rem;
-$mobile-bodySize: 0.81rem;
+$mobile-bodyFont: 0.81rem;
 $mobile-bodyHeight: 1.13rem;
-$desktop-headlinePadding: 3rem 0 2.25rem 2.25rem;
+
+$tablet-marginLeft: 2.25rem;
+
+$desktop-headlinePadding: 3rem 0 2.25rem 0;
 $desktop-headerSize: 3.75rem;
 $desktop-sectionHeight: 2.75rem;
-$desktop-sectionSize: 2.25rem;
+$desktop-sectionFont: 2.25rem;
 $desktop-sidePadding: 0 5rem 0 5rem;
-$desktop-subSize: 1.5rem;
-$desktop-subHeight: 2rem;
+$desktop-subFont: 1.5rem;
+$desktop-bodyFont: 0.88rem;
+$desktop-bodyHeight: 1.38rem;
+$desktop-marginLeft: 5rem;
+$desktop-margin: 0 10rem 0 10rem;
