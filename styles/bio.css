@@ -291,6 +291,11 @@ html, body {
   }
 }
 
+.comment__image {
+  width: 120px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+}
 .footer {
   background-color: #323232;
   color: #FFFFFF;
