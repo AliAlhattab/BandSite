@@ -95,8 +95,6 @@ html, body {
   height: 41vh;
   background-color: rgba(50, 50, 50, 0.5);
   background-blend-mode: overlay;
-  display: flex;
-  align-items: center;
   background-position: center;
 }
 @media screen and (min-width: 768px) {
@@ -104,21 +102,33 @@ html, body {
     height: 70vh;
   }
 }
+.header__album {
+  padding-top: 3rem;
+  margin: 0 0 0 1rem;
+  line-height: 2rem;
+}
 .header__title {
   margin-left: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
+  word-spacing: 1%;
+  width: 14.69rem;
 }
 @media screen and (min-width: 768px) {
   .header__title {
     font-size: 3.75rem;
     margin-left: 2.25rem;
+    width: 32.69rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__title {
     margin-left: 5rem;
   }
+}
+.header__song {
+  margin: 0 1rem 5rem 1rem;
+  width: 93%;
 }
 
 .footer {
