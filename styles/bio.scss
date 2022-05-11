@@ -232,43 +232,6 @@ html, body{
         }
     }
 }
-// Start of Comment SCSS
-.comment{
-
-    &__title{
-
-    }
-    &__creation{
-
-    }
-    &__image{
-        width: 120px;
-        clip-path: circle();
-    }
-    &__name-label{
-
-    }
-    &__name-input{
-
-    }
-    &__comment-label{
-
-    }
-    &__comment-input{
-
-    }
-    &__button{
-
-    }
-}
-
-
-
-
-
-
-
-
 
 // Start of Footer SCSS
 .footer{
@@ -317,7 +280,7 @@ html, body{
         }        
     }
     &__image{
-        margin-top: 4rem;
+        margin-top: 2rem;
         padding-bottom: 1rem;
         @include tablet{
             position: absolute;
