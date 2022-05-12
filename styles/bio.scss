@@ -233,6 +233,45 @@ html, body{
     }
 }
 
+.form{
+
+    &__title{
+        margin-left: 1rem;
+    }
+    &__info{
+
+    }
+    &__group{
+        
+       
+    }
+    &__image{
+        background-image: url(../Assets/Images/Mohan-muruge.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        
+        margin: 1rem 1rem 0 1rem;
+    }
+    &__name{
+        margin: 1rem 0 0 0;
+    }
+    &__text{
+        height: 36px;
+        width: 100%;
+    }
+    &__button{
+        width: 100%;
+        margin: 1rem 0 1rem 0;
+    }
+    &__comment{
+
+    }
+}
+
 // Start of Footer SCSS
 .footer{
     background-color: $primary-color;

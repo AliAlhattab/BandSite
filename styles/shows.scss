@@ -94,7 +94,6 @@ background-position: center;
         @include tablet{
             font-size: $desktop-headerSize;
             margin-left: $tablet-marginLeft;
-            
             width: 32.69rem;
 
         }
@@ -104,7 +103,7 @@ background-position: center;
     }
     &__song{
         margin: 0 1rem 5rem 1rem;
-        width: 93%;
+
     }
 }
 
