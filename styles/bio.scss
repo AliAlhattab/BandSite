@@ -311,10 +311,13 @@ html, body{
     &__picture{
         background-color: #E1E1E1;
         border-radius: 50%;
-        width: 120px;
+        width: 36px;
         height: 36px;
-        margin-top: 0.7rem;
-        margin-right: 1rem;
+        margin: 1rem 0 0 0rem;
+    }
+    &__comment-info{
+        width: 100%;
+        padding-left: 1rem;
     }
 }
 
