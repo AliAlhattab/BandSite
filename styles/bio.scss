@@ -237,12 +237,17 @@ html, body{
 
     &__title{
         margin-left: 1rem;
+        font-size: $mobile-headerSize;
+        font-family: "AvenirNextLTPro-Demi";
     }
     &__info{
-
+        display: flex;
+        margin: $mobile-sidePadding;
+        
     }
     &__group{
-        
+        width: 100%;
+        padding-left: 1rem;
        
     }
     &__image{
@@ -253,22 +258,63 @@ html, body{
         border-radius: 50%;
         width: 36px;
         height: 36px;
-        
-        margin: 1rem 1rem 0 1rem;
+        margin: 2.2rem 0 0 0rem;
     }
-    &__name{
-        margin: 1rem 0 0 0;
+    &__label{
+        margin: 1rem 0 0.5rem 0;
+        font-size: 12px;
+        font-weight: bold;
+        color: $inactive
     }
     &__text{
         height: 36px;
         width: 100%;
+        
     }
     &__button{
-        width: 100%;
-        margin: 1rem 0 1rem 0;
+        width: 80%;
+        height: 40px;
+        margin: 1rem 1rem 1rem 4rem;
+        color: $primary-textColor;
+        background-color: $primary-color;
+        border-radius: 4px;
+        border-style: none;
+    }
+    &__button:hover{
+
     }
     &__comment{
-
+        
+    }
+    &__container{
+        border-top: 1px solid #E1E1E1;
+        margin: $mobile-sidePadding;
+        display: flex;
+        
+        
+    }
+    &__name-date{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name{
+        font-family: "AvenirNextLTPro-Demi";
+    }
+    &__date{
+        color: $inactive;
+    }
+    &__paragraph{
+        margin: 0 0 1rem 0;
+        font-size: $mobile-bodyFont;
+        line-height: $mobile-bodyHeight;
+    }
+    &__picture{
+        background-color: #E1E1E1;
+        border-radius: 50%;
+        width: 120px;
+        height: 36px;
+        margin-top: 0.7rem;
+        margin-right: 1rem;
     }
 }
 

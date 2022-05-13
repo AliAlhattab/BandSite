@@ -19,12 +19,33 @@ let commentSection = [
 const container = document.querySelector('.form__comments');
 
 function makeComment(comment){
-const commentName = document.createElement("p");
-const names = document.createElement('names')
-names.innerText = comment.name + " / " + comment.date + " / " + comment.comment;
-commentName.appendChild(names);
-container.appendChild(commentName);
+const commentContainer = document.createElement("div");
+const commentNameDate = document.createElement("div");
+const commentPicture = document.createElement('div');
+const commentInfo = document.createElement('div');
+const commentText = document.createElement('p');
+const commentName = document.createElement('p');
+const commentDate = document.createElement('p');
 
+commentContainer.classList.add("form__container");
+commentNameDate.classList.add("form__name-date");
+commentText.classList.add("form__paragraph");
+commentName.classList.add("form__name");
+commentDate.classList.add("form__date");
+commentPicture.classList.add("form__picture");
+commentInfo.classList.add("form__comment-info");
+
+commentName.innerText = comment.name;
+commentDate.innerText = comment.date;
+commentText.innerText = comment.comment;
+
+commentNameDate.appendChild(commentName);
+commentNameDate.appendChild(commentDate);
+commentContainer.appendChild(commentPicture);
+commentContainer.appendChild(commentInfo);
+commentInfo.appendChild(commentNameDate);
+commentInfo.appendChild(commentText);
+container.appendChild(commentContainer);
 
 }
 
