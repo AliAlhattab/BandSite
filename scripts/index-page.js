@@ -1,3 +1,4 @@
+// array of comments
 let commentSection = [
     {
         name: 'Connor Walton',
@@ -19,26 +20,30 @@ let commentSection = [
 const container = document.querySelector('.form__comments');
 
 commentSection.forEach((comment) => {
+    //creating the elements
     const commentContainer = document.createElement("div");
-    const commentNameDate = document.createElement("div");
+    const commentNameDate = document.createElement("div"); 
     const commentPicture = document.createElement('div');
     const commentInfo = document.createElement('div');
     const commentText = document.createElement('p');
     const commentName = document.createElement('p');
     const commentDate = document.createElement('p');
     
+    //adding class names to each element
     commentContainer.classList.add("form__container");
     commentNameDate.classList.add("form__name-date");
+    commentPicture.classList.add("form__picture");
+    commentInfo.classList.add("form__comment-info");
     commentText.classList.add("form__paragraph");
     commentName.classList.add("form__name");
     commentDate.classList.add("form__date");
-    commentPicture.classList.add("form__picture");
-    commentInfo.classList.add("form__comment-info");
     
+    //adding Text to the elements
     commentName.innerText = comment.name;
     commentDate.innerText = comment.date;
     commentText.innerText = comment.comment;
     
+    //appending the elements into the html
     commentNameDate.appendChild(commentName);
     commentNameDate.appendChild(commentDate);
     commentContainer.appendChild(commentPicture);
@@ -47,3 +52,16 @@ commentSection.forEach((comment) => {
     commentInfo.appendChild(commentText);
     container.appendChild(commentContainer); 
 });
+
+const form = document.querySelector(".form");
+
+
+
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    const name = document.querySelector("#name");
+    const comment = document.querySelector("#comment");
+    console.log(name.value);
+    console.log(comment.value);
+    console.log(Date());
+})
