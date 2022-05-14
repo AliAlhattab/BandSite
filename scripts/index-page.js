@@ -19,7 +19,7 @@ let commentSection = [
 // selecting the class .form__comments
 const container = document.querySelector('.form__comments');
 
-commentSection.forEach((comment) => {
+ function displayComment(comment){
     //creating the elements
     const commentContainer = document.createElement("div");
     const commentNameDate = document.createElement("div"); 
@@ -51,17 +51,30 @@ commentSection.forEach((comment) => {
     commentInfo.appendChild(commentNameDate);
     commentInfo.appendChild(commentText);
     container.appendChild(commentContainer); 
-});
+};
 
+for (i = 0; i < commentSection.length; i++){
+    displayComment(commentSection[i]);
+};
+
+
+// created comment date
+let date = new Date();
+let month = date.getMonth()+1;
+let day = date.getDate();
+let year = date.getFullYear();
+let fullDate = (month + "/" + day + "/" + year);
+
+// selected the forms class
 const form = document.querySelector(".form");
 
-
-
+//event listener for my comment button
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
     const name = document.querySelector("#name");
-    const comment = document.querySelector("#comment");
-    console.log(name.value);
-    console.log(comment.value);
-    console.log(Date());
+    const comments = document.querySelector("#comment");
+    commentSection.unshift({name: name.value, date: fullDate, comment: comments.value});
+    displayComment(commentSection[0]);
+    name.value = "";
+    comments.value = "";
 })
