@@ -13,7 +13,6 @@ html, body{
 color: $primary-textColor;
 background-image: url(../Assets/Images/hero-shows.jpg);
 background-size: cover;
-height: 41vh;
 background-color: rgba(50, 50, 50, 0.5);
 background-blend-mode: overlay;
 background-position: center;
@@ -24,14 +23,13 @@ background-position: center;
         padding-top: 3rem;
         margin: 0 0 0 1rem;
         line-height: $mobile-headerHeight;
+        font-size: $mobile-bodyFont;
     }
 
     &__title{
         margin-left: 1rem;
         font-size: $mobile-headerSize;
-        line-height: $mobile-headerHeight;
-        word-spacing: 1%;
-        width: 14.69rem;
+        line-height: 10px;
         @include tablet{
             font-size: $desktop-headerSize;
             margin-left: $tablet-marginLeft;
@@ -43,7 +41,9 @@ background-position: center;
         }
     }
     &__song{
-        margin: 0 1rem 5rem 1rem;
+        margin: 1rem 1rem 1rem 1rem;
+        width: 90%;
+        height: 25vh;
 
     }
 }

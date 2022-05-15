@@ -1,6 +1,6 @@
-@use "./partials/mixins" as *;
-@use "./partials/variables" as *;
-@use "./partials/fonts" as *;
+@use "./mixins" as *;
+@use "./variables" as *;
+@use "./fonts" as *;
 
 // Start of Nav SCSS
 .nav{

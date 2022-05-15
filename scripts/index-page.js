@@ -20,23 +20,28 @@ let commentSection = [
 const container = document.querySelector('.form__comments');
 
  function displayComment(comment){
-    //creating the elements
-    const commentContainer = document.createElement("div");
-    const commentNameDate = document.createElement("div"); 
-    const commentPicture = document.createElement('div');
-    const commentInfo = document.createElement('div');
-    const commentText = document.createElement('p');
-    const commentName = document.createElement('p');
-    const commentDate = document.createElement('p');
-    
-    //adding class names to each element
+    //creating the elements and adding class names to each.
+    const commentContainer = document.createElement("section");
     commentContainer.classList.add("form__container");
+
+    const commentNameDate = document.createElement("section"); 
     commentNameDate.classList.add("form__name-date");
+
+    const commentPicture = document.createElement('article');
     commentPicture.classList.add("form__picture");
+
+    const commentInfo = document.createElement('section');
     commentInfo.classList.add("form__comment-info");
+
+    const commentText = document.createElement('p');
     commentText.classList.add("form__paragraph");
+
+    const commentName = document.createElement('p');
     commentName.classList.add("form__name");
+    
+    const commentDate = document.createElement('p');
     commentDate.classList.add("form__date");
+
     
     //adding Text to the elements
     commentName.innerText = comment.name;

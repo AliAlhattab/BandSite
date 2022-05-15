@@ -10,11 +10,6 @@
   font-family: "AvenirNextLTPro-Demi";
   src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
 }
-html, body {
-  margin: 0;
-  font-family: "AvenirNextLTPro-Regular";
-}
-
 .nav {
   background-color: #323232;
 }
@@ -86,48 +81,6 @@ html, body {
 .nav__item:hover {
   border-bottom: 3px solid #FFFFFF;
   color: #FFFFFF;
-}
-
-.header {
-  color: #FFFFFF;
-  background-image: url(../Assets/Images/hero-shows.jpg);
-  background-size: cover;
-  height: 41vh;
-  background-color: rgba(50, 50, 50, 0.5);
-  background-blend-mode: overlay;
-  background-position: center;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    height: 70vh;
-  }
-}
-.header__album {
-  padding-top: 3rem;
-  margin: 0 0 0 1rem;
-  line-height: 2rem;
-}
-.header__title {
-  margin-left: 1rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  word-spacing: 1%;
-  width: 14.69rem;
-}
-@media screen and (min-width: 768px) {
-  .header__title {
-    font-size: 3.75rem;
-    margin-left: 2.25rem;
-    width: 32.69rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header__title {
-    margin-left: 5rem;
-  }
-}
-.header__song {
-  margin: 0 1rem 5rem 1rem;
 }
 
 .footer {
@@ -263,4 +216,51 @@ html, body {
     font-size: 0.88rem;
     line-height: 1.38rem;
   }
+}
+
+html, body {
+  margin: 0;
+  font-family: "AvenirNextLTPro-Regular";
+}
+
+.header {
+  color: #FFFFFF;
+  background-image: url(../Assets/Images/hero-shows.jpg);
+  background-size: cover;
+  background-color: rgba(50, 50, 50, 0.5);
+  background-blend-mode: overlay;
+  background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 70vh;
+  }
+}
+.header__album {
+  padding-top: 3rem;
+  margin: 0 0 0 1rem;
+  line-height: 2rem;
+  font-size: 0.81rem;
+}
+.header__title {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  line-height: 10px;
+}
+@media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 3.75rem;
+    margin-left: 2.25rem;
+    width: 32.69rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__title {
+    margin-left: 5rem;
+  }
+}
+.header__song {
+  margin: 1rem 1rem 1rem 1rem;
+  width: 90%;
+  height: 25vh;
 }/*# sourceMappingURL=shows.css.map */

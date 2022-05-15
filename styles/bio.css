@@ -10,11 +10,6 @@
   font-family: "AvenirNextLTPro-Demi";
   src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
 }
-html, body {
-  margin: 0;
-  font-family: "AvenirNextLTPro-Regular";
-}
-
 .nav {
   background-color: #323232;
 }
@@ -86,6 +81,146 @@ html, body {
 .nav__item:hover {
   border-bottom: 3px solid #FFFFFF;
   color: #FFFFFF;
+}
+
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 0 1rem 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__socials {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__socials {
+    padding-left: 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.25rem 0 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__contacts {
+    padding-left: 5rem;
+    width: 50%;
+  }
+}
+.footer__copyright {
+  margin: 0;
+  font-size: 0.81rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    padding: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright {
+    padding: 2.25rem 0 2.25rem 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    position: relative;
+    bottom: 17.75rem;
+    margin-left: 80%;
+  }
+}
+.footer__image {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__image {
+    position: absolute;
+  }
+}
+
+.socials__title {
+  margin: 0;
+  padding: 1.5rem 0 1rem 0;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .socials__title {
+    font-size: 1.5rem;
+    padding: 3rem 1rem 2.25rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .socials__title {
+    padding: 3rem 1rem 2.25rem 0rem;
+  }
+}
+.socials__images {
+  padding: 0 2rem 2rem 0rem;
+}
+@media screen and (min-width: 768px) {
+  .socials__images {
+    padding: 1.7rem 1rem 1rem 1rem;
+  }
+}
+
+.contacts__name {
+  margin: 0;
+  font-size: 0.81rem;
+  line-height: 1.13rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts__name {
+    font-size: 0.88rem;
+    line-height: 1.38rem;
+  }
+}
+.contacts__titles {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.81rem;
+  line-height: 1.13rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts__titles {
+    font-size: 0.88rem;
+    line-height: 1.38rem;
+  }
+}
+.contacts__info {
+  margin: 0;
+  font-size: 0.81rem;
+  line-height: 1.13rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts__info {
+    font-size: 0.88rem;
+    line-height: 1.38rem;
+  }
+}
+.contacts__email {
+  margin: 1.5rem 0 1.5rem 0;
+  font-size: 0.81rem;
+  line-height: 1.13rem;
+}
+@media screen and (min-width: 768px) {
+  .contacts__email {
+    font-size: 0.88rem;
+    line-height: 1.38rem;
+  }
+}
+
+html, body {
+  margin: 0;
+  font-family: "AvenirNextLTPro-Regular";
 }
 
 .header {
@@ -487,139 +622,4 @@ html, body {
 .form__comment-info {
   width: 100%;
   padding-left: 1rem;
-}
-
-.footer {
-  background-color: #323232;
-  color: #FFFFFF;
-  padding: 0 1rem 0 1rem;
-}
-@media screen and (min-width: 768px) {
-  .footer {
-    padding: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer__socials {
-    display: flex;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__socials {
-    padding-left: 5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer__contacts {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2.25rem 0 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__contacts {
-    padding-left: 5rem;
-    width: 50%;
-  }
-}
-.footer__copyright {
-  margin: 0;
-  font-size: 0.81rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__copyright {
-    padding: 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__copyright {
-    padding: 2.25rem 0 2.25rem 5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer__logo {
-    position: relative;
-    bottom: 17.75rem;
-    margin-left: 80%;
-  }
-}
-.footer__image {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__image {
-    position: absolute;
-  }
-}
-
-.socials__title {
-  margin: 0;
-  padding: 1.5rem 0 1rem 0;
-  font-size: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  .socials__title {
-    font-size: 1.5rem;
-    padding: 3rem 1rem 2.25rem 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .socials__title {
-    padding: 3rem 1rem 2.25rem 0rem;
-  }
-}
-.socials__images {
-  padding: 0 2rem 2rem 0rem;
-}
-@media screen and (min-width: 768px) {
-  .socials__images {
-    padding: 1.7rem 1rem 1rem 1rem;
-  }
-}
-
-.contacts__name {
-  margin: 0;
-  font-size: 0.81rem;
-  line-height: 1.13rem;
-}
-@media screen and (min-width: 768px) {
-  .contacts__name {
-    font-size: 0.88rem;
-    line-height: 1.38rem;
-  }
-}
-.contacts__titles {
-  margin: 0 0 1.5rem 0;
-  font-size: 0.81rem;
-  line-height: 1.13rem;
-}
-@media screen and (min-width: 768px) {
-  .contacts__titles {
-    font-size: 0.88rem;
-    line-height: 1.38rem;
-  }
-}
-.contacts__info {
-  margin: 0;
-  font-size: 0.81rem;
-  line-height: 1.13rem;
-}
-@media screen and (min-width: 768px) {
-  .contacts__info {
-    font-size: 0.88rem;
-    line-height: 1.38rem;
-  }
-}
-.contacts__email {
-  margin: 1.5rem 0 1.5rem 0;
-  font-size: 0.81rem;
-  line-height: 1.13rem;
-}
-@media screen and (min-width: 768px) {
-  .contacts__email {
-    font-size: 0.88rem;
-    line-height: 1.38rem;
-  }
 }/*# sourceMappingURL=bio.css.map */
