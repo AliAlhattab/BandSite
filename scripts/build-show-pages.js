@@ -79,6 +79,9 @@ function showList(show){
     const info = document.createElement("section");
     info.classList.add("table__info");
 
+    const selectedInfo = document.createElement('section');
+    selectedInfo.classList.add("table__info--selected");
+
     // created a the label and element to hold the date
     const dateContainer = document.createElement('section');
     dateContainer.classList.add('table__date');
@@ -147,10 +150,20 @@ function showList(show){
     table.appendChild(info);
 }
 
+// loop through the array
 for(i = 0; i < shows.length; i++){
     showList(shows[i]);
 }
 
 
+//eventListener to create an active modifier to table__info
+let infoContainer = document.querySelectorAll(".table__info");
+
+infoContainer.forEach(container =>{
+    container.addEventListener('click', function(){
+        infoContainer.forEach(color => color.classList.remove('table__info--active'));
+        this.classList.add('table__info--active');
+    });
+});
 
 

@@ -263,20 +263,20 @@ html, body {
 .header__title {
   margin-left: 1rem;
   font-size: 1.5rem;
-  width: 200px;
+  width: 12.5rem;
   line-height: inherit;
 }
 @media screen and (min-width: 768px) {
   .header__title {
     font-size: 3.75rem;
     margin-left: 2.25rem;
-    width: 500px;
+    width: 31.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__title {
     margin-left: 5rem;
-    width: 494px;
+    width: 30.88rem;
   }
 }
 .header__song {
@@ -367,15 +367,17 @@ html, body {
   }
 }
 .table__info {
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 1.13rem 1rem 1.13rem;
   border-bottom: 1px solid #E1E1E1;
   margin: 0;
+  background-color: #FFFFFF;
 }
-.table__info--selected {
-  background-color: #FAFAFA;
+.table__info--active {
+  background-color: #E1E1E1;
 }
 @media screen and (min-width: 768px) {
   .table__info {
+    padding: 1.5rem 0 1.5rem 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -429,7 +431,7 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .table__button {
-    width: 150px;
+    width: 9.38rem;
   }
 }
 .table__button:hover {
