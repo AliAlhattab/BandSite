@@ -129,7 +129,7 @@ html, body{
 
 // Start of Photos SCSS
 .photos{
-    background-color: #FAFAFA;
+    background-color: $secondary-backgroundColor;
     margin: $mobile-sidePadding;
     @include tablet{
         margin: 0 0 0.5rem 0;
@@ -240,9 +240,9 @@ html, body{
         box-sizing: border-box;
         height: 2.25rem;
         width: 100%;
-        border: 1px solid #E1E1E1;
+        border: 1px solid $secondary-color;
         border-radius: 4px;
-        background-color: #FAFAFA;
+        background-color: $secondary-backgroundColor;
         padding: 0;
         font-family: "AvenirNextLTPro-Regular";
         margin-bottom: 1rem;
@@ -301,12 +301,12 @@ html, body{
         }
     }
     &__container{
-        border-top: 1px solid #E1E1E1;
+        border-top: 1px solid $secondary-color;
         display: flex;
        
     }
     &__container:nth-last-child(1){
-        border-bottom: 1px solid #E1E1E1;
+        border-bottom: 1px solid $secondary-color;
     }
     &__name-date{
         display: flex;
@@ -324,7 +324,7 @@ html, body{
         line-height: $mobile-bodyHeight;
     }
     &__picture{
-        background-color: #E1E1E1;
+        background-color: $secondary-color;
         border-radius: 50%;
         width: 2.25rem;
         height: 2.25rem;

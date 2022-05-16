@@ -19,7 +19,9 @@ let commentSection = [
 // selecting the class .form__comments
 const container = document.querySelector('.form__comments');
 
+// created displayComment function
  function displayComment(comment){
+
     //creating the elements and adding class names to each.
     const commentContainer = document.createElement("section");
     commentContainer.classList.add("form__container");
@@ -42,7 +44,6 @@ const container = document.querySelector('.form__comments');
     const commentDate = document.createElement('p');
     commentDate.classList.add("form__date");
 
-    
     //adding Text to the elements
     commentName.innerText = comment.name;
     commentDate.innerText = comment.date;
