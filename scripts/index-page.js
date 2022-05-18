@@ -17,13 +17,14 @@
 //     }
 // ]
 
-const commentAPI = "https://project-1-api.herokuapp.com/comments?api_key=3ba35720-3fda-45d5-a98e-eef63b9854fa";
-axios.get(commentAPI).then(response => {
-    console.log(response.data);
-    
+    // get request for the comments
+    const commentAPI = "https://project-1-api.herokuapp.com/comments?api_key=3ba35720-3fda-45d5-a98e-eef63b9854fa";
+    axios.get(commentAPI).then(response => {
+
     // declared response.data as commentSection
     const commentSection = response.data;
-
+    
+ 
 
     // selecting the class .form__comments
     const container = document.querySelector('.form__comments');
@@ -53,9 +54,17 @@ axios.get(commentAPI).then(response => {
         const commentDate = document.createElement('p');
         commentDate.classList.add("form__date");
 
+        // converted the timestamp into real date for comments
+        let time = comment.timestamp;
+        let date = new Date(time);
+        let month = date.getMonth()+1;
+        let day = date.getDate();
+        let year = date.getFullYear();
+        let fullDate = (month + "/" + day + "/" + year);
+
         //adding Text to the elements
         commentName.innerText = comment.name;
-        commentDate.innerText = comment.timestamp;
+        commentDate.innerText = fullDate;
         commentText.innerText = comment.comment;
         
         //appending the elements into the html
@@ -71,6 +80,11 @@ axios.get(commentAPI).then(response => {
     for (i = 0; i < commentSection.length; i++){
         displayComment(commentSection[i]);
     };
+});
+
+
+    // get request for the comments
+    axios.post(commentAPI).then(response => {
 
     // created comment date
     let date = new Date();
