@@ -20,9 +20,17 @@
     // get request for the comments
     const commentAPI = "https://project-1-api.herokuapp.com/comments?api_key=3ba35720-3fda-45d5-a98e-eef63b9854fa";
     axios.get(commentAPI).then(response => {
+   
+        // declared response.data as commentSection
+        const commentSection = response.data;
 
-    // declared response.data as commentSection
-    const commentSection = response.data;
+        commentSection.forEach((comment) => {
+            displayComment(comment);
+        
+        });
+        
+
+        });
     
  
 
@@ -30,7 +38,7 @@
     const container = document.querySelector('.form__comments');
 
     // created displayComment function
-    function displayComment(comment){
+    let displayComment = function(comment){
 
         //creating the elements and adding class names to each.
         const commentContainer = document.createElement("section");
@@ -77,15 +85,6 @@
         container.appendChild(commentContainer); 
     };
 
-    for (i = 0; i < commentSection.length; i++){
-        displayComment(commentSection[i]);
-    };
-});
-
-
-    // get request for the comments
-    axios.post(commentAPI).then(response => {
-
     // created comment date
     let date = new Date();
     let month = date.getMonth()+1;
@@ -96,7 +95,7 @@
     // selected the forms class
     const form = document.querySelector(".form");
 
-    //event listener for my comment button
+   // event listener for my comment button
     form.addEventListener('submit', (e) =>{
         e.preventDefault();
         const name = document.querySelector("#name");
@@ -106,4 +105,3 @@
         name.value = "";
         comments.value = "";
     });
-});
