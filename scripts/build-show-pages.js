@@ -1,57 +1,29 @@
-// // array of shows
-// let shows = [
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Tue Sept 21 2021",
-//         venue: "Pier 3 East",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Fri Oct 15 2021",
-//         venue: "View Lounge",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Sat Nov 06 2021",
-//         venue: "Hyatt Agency",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Fri Nov 26 2021",
-//         venue: "Moscow Center",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Wed Dec 15 2021",
-//         venue: "Press Club",
-//         location: "San Francisco, CA"
-//     }
-// ];
-
+// get request for the show times
 const getShows = "https://project-1-api.herokuapp.com/showdates?api_key=3ba35720-3fda-45d5-a98e-eef63b9854fa";
 
+// axios get request
 axios.get(getShows).then(response => {
 
+    // declared response.data as showTime
     const showTime = response.data;
 
+      // looping through showTime and displaying them through showList function
     showTime.forEach((show) => {
         showList(show);
     });
 
-    //eventListener to create an active modifier to table__info
+    // selecting all classes with the name table__info
     let infoContainer = document.querySelectorAll(".table__info");
 
+    //eventListener to create an active modifier to table__info
     infoContainer.forEach(container => {
         container.addEventListener('click', function() {
             infoContainer.forEach(active => active.classList.remove('table__info--active'));
             this.classList.add('table__info--active');
         });
     });
-    
+
+// if im unable to GET the request the console will display "cannot get shows"
 }).catch(error => {
     console.log('cannot get shows');
 });
@@ -65,8 +37,6 @@ title.classList.add("table__title");
 
 // created the string thats goes in title
 title.innerText = "Shows";
-
-// appending the element into the table section
 
 // creating the date venue location titles for tablet and desktop mode
 const menu = document.createElement('section');
@@ -178,10 +148,7 @@ let showList = function(show){
 
     // appending the info section into the table
     table.appendChild(info);
-
-
-    
-}
+};
 
 
 

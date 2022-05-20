@@ -1,25 +1,23 @@
-
     // get request for the comments
     const commentAPI = "https://project-1-api.herokuapp.com/comments?api_key=3ba3523720-3fda-45d5-a98e-eef63b9854fa";
-    
-    const headers = {
-        'Content-Type': "application/json"
-    }
 
+    // axios get request
     axios.get(commentAPI).then(response => {
    
         // declared response.data as commentSection
         const commentSection = response.data;
 
+        // sorting the timestamps from newest to oldest
         commentSection.sort((a, b) => {
             return b.timestamp - a.timestamp;
         });
 
-        console.log(commentSection)
+        // looping through commentSection and displaying them through displayComment function
         commentSection.forEach((comment) => {
             displayComment(comment);
         });
 
+    // if im unable to GET the request the console will display "cannot get comments"
     }).catch(error => {
         console.error("cannot get comments");
     });
@@ -87,28 +85,39 @@
         name.value = "";
         comments.value = "";
 
+        // post request header
+        const headers = {'Content-Type': "application/json"};
+
+        // axios post request
         axios.post(commentAPI, newComment, headers)
         .then(response => {
             
+            // clears the comment section before reloading the comments
             container.innerText = null;
 
+            // axios get request
             axios.get(commentAPI).then(response => {
 
+                // declared response.data as commentSection
                 const commentSection = response.data;
 
+                // sorting the timestamps from newest to oldest
                 commentSection.sort((a, b) => {
                     return b.timestamp - a.timestamp;
                 });
 
+                 // looping through commentSection and displaying them through displayComment function
                 commentSection.forEach((comment) => {
                     displayComment(comment);
                 });
            
+             // if im unable to GET the request the console will display "cannot get comments"
             }).catch(error => {
                 console.error("cannot get comments");
             });
+
+         // if im unable to POST the request the console will display "cannot post comments"
         }).catch(error => {
             console.error("cannot post comments");
         });
-
     });
