@@ -23,24 +23,17 @@
     const headers = {
         'Content-Type': "application/json"
     }
-    
-    const data = {
-    "name": "name.value",
-    "comment": "comments.value"
-    }
-
-
 
     axios.get(commentAPI).then(response => {
    
         // declared response.data as commentSection
         const commentSection = response.data;
-        const times = response.data.map(t => t.timestamp)
 
-        times.sort(function(a, b){
-            return b-a
+        commentSection.sort((a, b) => {
+            return b.timestamp - a.timestamp;
         });
-        
+
+        console.log(commentSection)
         commentSection.forEach((comment) => {
             displayComment(comment);
         });
@@ -120,6 +113,10 @@
             axios.get(commentAPI).then(response => {
 
                 const commentSection = response.data;
+
+                commentSection.sort((a, b) => {
+                    return b.timestamp - a.timestamp;
+                });
 
                 commentSection.forEach((comment) => {
                     displayComment(comment);
