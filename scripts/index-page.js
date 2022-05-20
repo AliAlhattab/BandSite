@@ -18,21 +18,36 @@
 // ]
 
     // get request for the comments
-    const commentAPI = "https://project-1-api.herokuapp.com/comments?api_key=3ba35720-3fda-45d5-a98e-eef63b9854fa";
+    const commentAPI = "https://project-1-api.herokuapp.com/comments?api_key=3ba3523720-3fda-45d5-a98e-eef63b9854fa";
+    
+    const headers = {
+        'Content-Type': "application/json"
+    }
+    
+    const data = {
+    "name": "name.value",
+    "comment": "comments.value"
+    }
+
+
+
     axios.get(commentAPI).then(response => {
    
         // declared response.data as commentSection
         const commentSection = response.data;
+        const times = response.data.map(t => t.timestamp)
 
+        times.sort(function(a, b){
+            return b-a
+        });
+        
         commentSection.forEach((comment) => {
             displayComment(comment);
-        
         });
-        
 
-        });
-    
- 
+    }).catch(error => {
+        console.error("cannot get comments");
+    });
 
     // selecting the class .form__comments
     const container = document.querySelector('.form__comments');
@@ -85,23 +100,36 @@
         container.appendChild(commentContainer); 
     };
 
-    // created comment date
-    let date = new Date();
-    let month = date.getMonth()+1;
-    let day = date.getDate();
-    let year = date.getFullYear();
-    let fullDate = (month + "/" + day + "/" + year);
-
     // selected the forms class
     const form = document.querySelector(".form");
 
    // event listener for my comment button
-    form.addEventListener('submit', (e) =>{
+   form.addEventListener('submit', (e) =>{
         e.preventDefault();
         const name = document.querySelector("#name");
         const comments = document.querySelector("#comment");
-        commentSection.unshift({name: name.value, timestamp: fullDate, comment: comments.value});
-        displayComment(commentSection[0]);
+        newComment = {name: name.value, comment: comments.value};
         name.value = "";
         comments.value = "";
+
+        axios.post(commentAPI, newComment, headers)
+        .then(response => {
+            
+            container.innerText = null;
+
+            axios.get(commentAPI).then(response => {
+
+                const commentSection = response.data;
+
+                commentSection.forEach((comment) => {
+                    displayComment(comment);
+                });
+           
+            }).catch(error => {
+                console.error("cannot get comments");
+            });
+        }).catch(error => {
+            console.error("cannot post comments");
+        });
+
     });

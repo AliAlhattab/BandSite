@@ -1,36 +1,46 @@
-// array of shows
-let shows = [
-    {
-        date: "Mon Sept 06 2021",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Tue Sept 21 2021",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Fri Oct 15 2021",
-        venue: "View Lounge",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Sat Nov 06 2021",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Fri Nov 26 2021",
-        venue: "Moscow Center",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Wed Dec 15 2021",
-        venue: "Press Club",
-        location: "San Francisco, CA"
-    }
-];
+// // array of shows
+// let shows = [
+//     {
+//         date: "Mon Sept 06 2021",
+//         venue: "Ronald Lane",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Tue Sept 21 2021",
+//         venue: "Pier 3 East",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Fri Oct 15 2021",
+//         venue: "View Lounge",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Sat Nov 06 2021",
+//         venue: "Hyatt Agency",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Fri Nov 26 2021",
+//         venue: "Moscow Center",
+//         location: "San Francisco, CA"
+//     },
+//     {
+//         date: "Wed Dec 15 2021",
+//         venue: "Press Club",
+//         location: "San Francisco, CA"
+//     }
+// ];
+
+const getShows = "https://project-1-api.herokuapp.com/showdates?api_key=3ba35720-3fda-45d5-a98e-eef63b9854fa";
+
+axios.get(getShows).then(response => {
+    const showTime = response.data;
+
+    showTime.forEach((show) => {
+        showList(show);
+    });
+});
 
 //selecting the table class
 const table = document.querySelector('.table');
@@ -73,7 +83,7 @@ menu.appendChild(venueMenu);
 menu.appendChild(locationMenu);
 
 // start of function showList
-function showList(show){
+let showList = function(show){
 
     // created the info section
     const info = document.createElement("section");
@@ -112,13 +122,22 @@ function showList(show){
     const buyTicket = document.createElement('button')
     buyTicket.classList.add("table__button");
 
+
+    // converted the timestamp into real date for comments
+    let time = show.date;
+    let date = new Date(time);
+    let month = date.getMonth()+1;
+    let day = date.getDate();
+    let year = date.getFullYear();
+    let fullDate = (month + "/" + day + "/" + year);
+
     // date information innertext
     dateLabel.innerText = "DATE";
-    dateInfo.innerText = show.date;
+    dateInfo.innerText = Date(time);
 
     // venue information innertext
     venueLabel.innerText = "VENUE";
-    venueInfo.innerText = show.venue;
+    venueInfo.innerText = show.place;
 
     // location information innertext
     locationLabel.innerText = "LOCATION";
@@ -148,11 +167,6 @@ function showList(show){
 
     // appending the info section into the table
     table.appendChild(info);
-}
-
-// loop through the array
-for(i = 0; i < shows.length; i++){
-    showList(shows[i]);
 }
 
 
