@@ -16,11 +16,6 @@ background-size: cover;
 background-color: rgba(50, 50, 50, 0.5);
 background-blend-mode: overlay;
 background-position: center;
-height: 40vh;
-
-@include tablet{
-    height: 90vh;
-}
 
 @include desktop{
     display: flex;
@@ -91,7 +86,6 @@ height: 40vh;
         @include desktop{
             display: flex;
         }
-        
     }
 
     &__title{
@@ -126,7 +120,6 @@ height: 40vh;
         @include desktop{
             margin-left: 9.5rem;
             padding-top: 48px;
-
         }
     }
    
@@ -152,14 +145,22 @@ height: 40vh;
         }
     }
 
-   
     &__info{
         padding: 1rem 1.13rem 1rem 1.13rem;
         border-bottom: 1px solid $secondary-color;
         margin: 0;
         background-color: $primary-textColor;
+
+        &:hover{
+            background-color: $secondary-backgroundColor;
+        }
+
         &--active{
             background-color: $secondary-color;
+           
+            &:hover{
+               background-color: $secondary-color; 
+            }  
         }
         
         @include tablet{
@@ -177,15 +178,12 @@ height: 40vh;
         }
     }
 
-    &__info:hover{
-        background-color: $secondary-backgroundColor;
-    }
-
     &__label{
         color: $inactive;
         font-weight: bold;
         font-size: 0.75rem;
         margin: $mobile-sidePadding;
+       
         @include tablet{
             display: none;
         }
@@ -194,6 +192,7 @@ height: 40vh;
     &__text{
         margin: 0.5rem 1rem 1rem 1rem;
         width: 12.5rem;
+       
         @include tablet{
             margin: 0
         }
@@ -215,6 +214,7 @@ height: 40vh;
         border-radius: 4px;
         border-style: none;
         padding: 0;
+       
         @include tablet{
             width: 9.38rem;
         }

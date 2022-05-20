@@ -8,7 +8,6 @@ html, body{
     font-family: "AvenirNextLTPro-Regular";
 }
 
-
 // Start of Header SCSS
 .header{
     color: $primary-textColor;
@@ -20,17 +19,21 @@ html, body{
     display: flex;
     align-items: center;
     background-position: center;
+    
     @include tablet{
         height: 70vh;
     }
+
     &__title{
         margin-left: 1rem;
         font-size: $mobile-headerSize;
         line-height: $mobile-headerHeight;
+        
         @include tablet{
             font-size: $desktop-headerSize;
             margin-left: $tablet-marginLeft;
         }
+
         @include desktop{
             margin-left: $desktop-marginLeft;
         }
@@ -41,85 +44,107 @@ html, body{
 .about{
     color: $primary-color;
     margin: $mobile-sidePadding;
+   
     @include tablet {
         margin: 0;
-    }    
+    }  
+
     &__title{
         font-family: "AvenirNextLTPro-demi";
         padding: $mobile-headlinePadding;
         margin: 0;
         font-size: $mobile-headerSize;
+        
         @include tablet{
             padding: $desktop-headlinePadding;
             font-size: $desktop-sectionFont;
             margin-left: $tablet-marginLeft;
         } 
+
         @include desktop{
             margin-left: $desktop-marginLeft;  
         }
     }
+
     &__header{
+
         @include tablet{
             margin: $desktop-sidePadding;
         }
+
         @include desktop{
             margin: $desktop-margin;
         }
     }
+
     &__image{
         width: 100%;
         padding-bottom: 1rem;
     }
+
     &__quote{
         color: $primary-color;
         font-family: "AvenirNextLTPro-Demi";
         margin: 0;
         font-size: $mobile-bodyFont;
         line-height: $mobile-bodyHeight;
+        
         @include tablet{
             font-size: $desktop-subFont;
             line-height: 2rem;
         }
     }
+
     &__name{
         font-family: "AvenirNextLTPro-Demi";
         padding-top: 1rem;
         margin: 0;
         font-size: $mobile-bodyFont;
         line-height: $mobile-bodyHeight;
+        
         @include tablet{
             font-size: 0.88rem;
         }
     }
+
     &__bio{
+       
         @include tablet{
            margin: $desktop-sidePadding;
         }
+
         @include desktop{
             margin: $desktop-margin;
         }
     }
+
     &__subtitle{
         padding: 1.5rem 0 1rem 0;
         margin: 0;
+        
         @include tablet{
             font-size: $desktop-subFont;
             font-family: "AvenirNextLTPro-Demi";
         }   
     }
+
     &__paragraph{
-       @include tablet{
+       
+        @include tablet{
            display: flex;
        }
     }
+
     &__text{
         margin-top: 0;
         line-height: 1.2rem;
         font-size: 0.8rem;
+        
         @include tablet{
             width: 90%;
             padding-right: 2.25rem;
         }
+        
         @include desktop{
             font-size: $desktop-bodyFont;
             line-height: $desktop-bodyHeight;
@@ -131,43 +156,53 @@ html, body{
 .photos{
     background-color: $secondary-backgroundColor;
     margin: $mobile-sidePadding;
+   
     @include tablet{
         margin: 0 0 0.5rem 0;
     }
+
     &__title{
         font-family: "AvenirNextLTPro-Demi";
         margin: 0;
         padding: $mobile-headlinePadding;
         font-size: $mobile-headerSize;
         line-height: $mobile-headerHeight;
+       
         @include tablet{
             padding: $desktop-headlinePadding;
             font-size: $desktop-sectionFont;
             margin-left: $tablet-marginLeft;
         }
+        
         @include desktop{
             margin-left: $desktop-marginLeft;
         }
     }
+
     &__gallery{
         display: flex;
         flex-wrap: wrap;
+        
         @include tablet {
             margin: 0 2.25rem 0 2.25rem;
             justify-content: space-between;
         }
+        
         @include desktop{
             margin: 0 5rem 0 5rem;
         }
     }
+
     &__images{
         width: 100%;
         padding-bottom: 1rem;
+        
         @include tablet{
             justify-content: center;
             width: 31%;
             padding-bottom: 1.5rem;
         }
+
         @include desktop{
             width: 31%;
             padding-bottom: 2.25rem ;
@@ -179,43 +214,53 @@ html, body{
     padding-bottom: 1rem;
     margin: $mobile-sidePadding;
     font-family: "AvenirNextLTPro-Regular";
+    
     @include tablet{
         margin: 0;
         padding-bottom: 2rem;
     }
+
     &__title{
         font-family: "AvenirNextLTPro-Demi";
         margin: 0;
         padding: $mobile-headlinePadding;
         font-size: $mobile-headerSize;
         line-height: $mobile-headerHeight;
+        
         @include tablet{
             padding: $desktop-headlinePadding;
             font-size: $desktop-sectionFont;
             margin-left: $tablet-marginLeft;
         }
+        
         @include desktop{
             margin-left: $desktop-marginLeft;
         }
     }
+
     &__info{
         display: flex;
+        
         @include tablet{
             margin: $desktop-sidePadding;
         }
+        
         @include desktop{
             margin: $desktop-commentMargin;
         }
         
     }
+
     &__group{
         width: 100%;
         margin-left: 0.75rem;
+        
         @include tablet{
             margin-left: 1rem;
         }
        
     }
+
     &__image{
         background-image: url(../Assets/Images/Mohan-muruge.jpg);
         background-size: cover;
@@ -225,17 +270,20 @@ html, body{
         width: 2.25rem;
         height: 2.25rem;
         margin-top: 1.5rem;
+        
         @include tablet{
             width: 3rem;
             height: 3rem;
         }
     }
+
     &__label{
         margin: 0 0 0.5rem 0 ;
         font-size: 0.75rem;
         font-weight: bold;
         color: $inactive
     }
+
     &__text{
         box-sizing: border-box;
         height: 2.25rem;
@@ -246,37 +294,46 @@ html, body{
         padding: 0;
         font-family: "AvenirNextLTPro-Regular";
         margin-bottom: 1rem;
+       
         @include tablet{
             height: 3rem;
         }
+        
         &--comment{
             height: 6.25rem;
         }
     }
+
     &__text::placeholder{
         color: $primary-color;
         font-family: "AvenirNextLTPro-Regular";
         padding: 0.5rem 0 0 0.5rem;
     }
+
     &__text:focus{
        outline: 1px solid $primary-color;
     }
+
     &__text:invalid:focus{
          outline: 1px solid red;
     }
+
     &__submit{
         display: flex;
         justify-content: center;
         margin: 0 0 1rem 3rem;
         padding: 0;
+       
         @include tablet{
             justify-content: end;
             margin: 0 5rem 1rem 3rem;
         }
+        
         @include desktop{
             margin: 0 22rem 1rem 3rem;
         }
     }
+
     &__button{
         width: 100%;
         height: 2.5rem;
@@ -285,55 +342,68 @@ html, body{
         border-radius: 4px;
         border-style: none;
         padding: 0;
+        
         @include tablet{
             width: 150px;
         }
     }
+
     &__button:hover{
         background-color: $primary-hover;
     }
+
     &__comments{
+        
         @include tablet{
             margin: $desktop-sidePadding;
         }
+        
         @include desktop{
             margin: $desktop-commentMargin;
         }
     }
+
     &__container{
         border-top: 1px solid $secondary-color;
         display: flex;
-       
     }
+
     &__container:nth-last-child(1){
         border-bottom: 1px solid $secondary-color;
     }
+
     &__name-date{
         display: flex;
         justify-content: space-between;
     }
+
     &__name{
         font-family: "AvenirNextLTPro-Demi";
     }
+
     &__date{
         color: $inactive;
     }
+
     &__paragraph{
         margin: 0 0 1rem 0;
         font-size: $mobile-bodyFont;
         line-height: $mobile-bodyHeight;
     }
+
     &__picture{
         background-color: $secondary-color;
         border-radius: 50%;
         width: 2.25rem;
         height: 2.25rem;
         margin: 1rem 0 0 0rem;
+       
         @include tablet{
             width: 3rem;
             height: 3rem;
         }
     }
+    
     &__comment-info{
         width: 100%;
         padding-left: 1rem;

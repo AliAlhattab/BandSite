@@ -35,11 +35,25 @@
 const getShows = "https://project-1-api.herokuapp.com/showdates?api_key=3ba35720-3fda-45d5-a98e-eef63b9854fa";
 
 axios.get(getShows).then(response => {
+
     const showTime = response.data;
 
     showTime.forEach((show) => {
         showList(show);
     });
+
+    //eventListener to create an active modifier to table__info
+    let infoContainer = document.querySelectorAll(".table__info");
+
+    infoContainer.forEach(container => {
+        container.addEventListener('click', function() {
+            infoContainer.forEach(active => active.classList.remove('table__info--active'));
+            this.classList.add('table__info--active');
+        });
+    });
+    
+}).catch(error => {
+    console.log('cannot get shows');
 });
 
 //selecting the table class
@@ -89,9 +103,6 @@ let showList = function(show){
     const info = document.createElement("section");
     info.classList.add("table__info");
 
-    const selectedInfo = document.createElement('section');
-    selectedInfo.classList.add("table__info--selected");
-
     // created a the label and element to hold the date
     const dateContainer = document.createElement('section');
     dateContainer.classList.add('table__date');
@@ -133,7 +144,7 @@ let showList = function(show){
 
     // date information innertext
     dateLabel.innerText = "DATE";
-    dateInfo.innerText = Date(time);
+    dateInfo.innerText = time;
 
     // venue information innertext
     venueLabel.innerText = "VENUE";
@@ -167,17 +178,10 @@ let showList = function(show){
 
     // appending the info section into the table
     table.appendChild(info);
+
+
+    
 }
 
-
-//eventListener to create an active modifier to table__info
-let infoContainer = document.querySelectorAll(".table__info");
-
-infoContainer.forEach(container =>{
-    container.addEventListener('click', function(){
-        infoContainer.forEach(color => color.classList.remove('table__info--active'));
-        this.classList.add('table__info--active');
-    });
-});
 
 

@@ -230,12 +230,6 @@ html, body {
   background-color: rgba(50, 50, 50, 0.5);
   background-blend-mode: overlay;
   background-position: center;
-  height: 40vh;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    height: 90vh;
-  }
 }
 @media screen and (min-width: 1280px) {
   .header {
@@ -372,7 +366,13 @@ html, body {
   margin: 0;
   background-color: #FFFFFF;
 }
+.table__info:hover {
+  background-color: #FAFAFA;
+}
 .table__info--active {
+  background-color: #E1E1E1;
+}
+.table__info--active:hover {
   background-color: #E1E1E1;
 }
 @media screen and (min-width: 768px) {
@@ -390,9 +390,6 @@ html, body {
     margin-left: 22rem;
     margin-right: 10rem;
   }
-}
-.table__info:hover {
-  background-color: #FAFAFA;
 }
 .table__label {
   color: #AFAFAF;
