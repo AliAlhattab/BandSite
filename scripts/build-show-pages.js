@@ -106,7 +106,9 @@ let showList = function(show){
 
     // converted the timestamp into real date for comments
     let time = show.date;
-    let date = new Date(time);
+    let numTime = parseInt(time)
+    console.log(numTime)
+    let date = new Date(numTime);
     let month = date.getMonth()+1;
     let day = date.getDate();
     let year = date.getFullYear();
@@ -114,7 +116,7 @@ let showList = function(show){
 
     // date information innertext
     dateLabel.innerText = "DATE";
-    dateInfo.innerText = time;
+    dateInfo.innerText = date;
 
     // venue information innertext
     venueLabel.innerText = "VENUE";

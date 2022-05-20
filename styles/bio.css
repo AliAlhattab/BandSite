@@ -1,14 +1,17 @@
 @font-face {
-  font-family: "AvenirNextLTPro-Regular";
-  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
+  font-family: "AvenirNext";
+  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "AvenirNextLTPro-Bold";
-  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf");
+  font-family: "AvenirNext";
+  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
 }
 @font-face {
-  font-family: "AvenirNextLTPro-Demi";
-  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
+  font-family: "AvenirNext";
+  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
 }
 .nav {
   background-color: #323232;
@@ -60,7 +63,7 @@
   text-align: center;
   padding-bottom: 0.7rem;
   font-size: 0.63rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .nav__item {
@@ -87,6 +90,7 @@
   background-color: #323232;
   color: #FFFFFF;
   padding: 0 1rem 0 1rem;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -220,7 +224,7 @@
 
 html, body {
   margin: 0;
-  font-family: "AvenirNextLTPro-Regular";
+  font-family: "AvenirNext";
 }
 
 .header {
@@ -266,7 +270,7 @@ html, body {
   }
 }
 .about__title {
-  font-family: "AvenirNextLTPro-demi";
+  font-weight: 600;
   padding: 1.5rem 0 1rem 0;
   margin: 0;
   font-size: 1.5rem;
@@ -299,7 +303,7 @@ html, body {
 }
 .about__quote {
   color: #323232;
-  font-family: "AvenirNextLTPro-Demi";
+  font-weight: 600;
   margin: 0;
   font-size: 0.81rem;
   line-height: 1.13rem;
@@ -311,7 +315,7 @@ html, body {
   }
 }
 .about__name {
-  font-family: "AvenirNextLTPro-Demi";
+  font-weight: 600;
   padding-top: 1rem;
   margin: 0;
   font-size: 0.81rem;
@@ -339,7 +343,7 @@ html, body {
 @media screen and (min-width: 768px) {
   .about__subtitle {
     font-size: 1.5rem;
-    font-family: "AvenirNextLTPro-Demi";
+    font-weight: 600;
   }
 }
 @media screen and (min-width: 768px) {
@@ -375,7 +379,7 @@ html, body {
   }
 }
 .photos__title {
-  font-family: "AvenirNextLTPro-Demi";
+  font-weight: 600;
   margin: 0;
   padding: 1.5rem 0 1rem 0;
   font-size: 1.5rem;
@@ -429,7 +433,7 @@ html, body {
 .form {
   padding-bottom: 1rem;
   margin: 0 1rem 0 1rem;
-  font-family: "AvenirNextLTPro-Regular";
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .form {
@@ -438,7 +442,7 @@ html, body {
   }
 }
 .form__title {
-  font-family: "AvenirNextLTPro-Demi";
+  font-weight: 600;
   margin: 0;
   padding: 1.5rem 0 1rem 0;
   font-size: 1.5rem;
@@ -508,7 +512,7 @@ html, body {
   border-radius: 4px;
   background-color: #FAFAFA;
   padding: 0;
-  font-family: "AvenirNextLTPro-Regular";
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -521,17 +525,17 @@ html, body {
 }
 .form__text::-moz-placeholder {
   color: #323232;
-  font-family: "AvenirNextLTPro-Regular";
+  font-weight: 400;
   padding: 0.5rem 0 0 0.5rem;
 }
 .form__text:-ms-input-placeholder {
   color: #323232;
-  font-family: "AvenirNextLTPro-Regular";
+  font-weight: 400;
   padding: 0.5rem 0 0 0.5rem;
 }
 .form__text::placeholder {
   color: #323232;
-  font-family: "AvenirNextLTPro-Regular";
+  font-weight: 400;
   padding: 0.5rem 0 0 0.5rem;
 }
 .form__text:focus {
@@ -596,7 +600,7 @@ html, body {
   justify-content: space-between;
 }
 .form__name {
-  font-family: "AvenirNextLTPro-Demi";
+  font-weight: 600;
 }
 .form__date {
   color: #AFAFAF;

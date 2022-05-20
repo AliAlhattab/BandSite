@@ -1,14 +1,17 @@
 @font-face {
-  font-family: "AvenirNextLTPro-Regular";
-  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
+  font-family: "AvenirNext";
+  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "AvenirNextLTPro-Bold";
-  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf");
+  font-family: "AvenirNext";
+  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
 }
 @font-face {
-  font-family: "AvenirNextLTPro-Demi";
-  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
+  font-family: "AvenirNext";
+  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
 }
 .nav {
   background-color: #323232;
@@ -60,7 +63,7 @@
   text-align: center;
   padding-bottom: 0.7rem;
   font-size: 0.63rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .nav__item {
@@ -87,6 +90,7 @@
   background-color: #323232;
   color: #FFFFFF;
   padding: 0 1rem 0 1rem;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -220,7 +224,7 @@
 
 html, body {
   margin: 0;
-  font-family: "AvenirNextLTPro-Regular";
+  font-family: "AvenirNext";
 }
 
 .header {
@@ -238,6 +242,7 @@ html, body {
   }
 }
 .header__album {
+  font-weight: 400;
   padding-top: 1rem;
   margin: 0 0 0 1rem;
   line-height: 2rem;
@@ -255,6 +260,7 @@ html, body {
   }
 }
 .header__title {
+  font-weight: 600;
   margin-left: 1rem;
   font-size: 1.5rem;
   width: 12.5rem;
@@ -294,6 +300,7 @@ html, body {
 .table {
   color: #323232;
   padding-bottom: 1rem;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .table {
@@ -306,7 +313,7 @@ html, body {
   }
 }
 .table__title {
-  font-family: "AvenirNextLTPro-demi";
+  font-weight: 600;
   padding: 1.5rem 0 1rem 0;
   font-size: 1.5rem;
   margin: 0 1rem 0 1rem;
@@ -411,8 +418,8 @@ html, body {
     margin: 0;
   }
 }
-.table__text:nth-child(2) {
-  font-family: "AvenirNextLTPro-Demi";
+.table__date {
+  font-weight: 600;
 }
 .table__submit {
   margin: 0 1rem 0 1rem;
