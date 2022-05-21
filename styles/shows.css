@@ -156,6 +156,7 @@
   margin: 0;
   padding: 1.5rem 0 1rem 0;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .socials__title {
@@ -349,17 +350,26 @@ html, body {
     padding-top: 48px;
   }
 }
+.table__date-menu {
+  font-weight: 600;
+}
 @media screen and (min-width: 768px) {
   .table__date-menu {
     width: 12.5rem;
     margin-bottom: 0;
   }
 }
+.table__venue-menu {
+  font-weight: 600;
+}
 @media screen and (min-width: 768px) {
   .table__venue-menu {
     width: 12.5rem;
     margin-bottom: 0;
   }
+}
+.table__location-menu {
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .table__location-menu {

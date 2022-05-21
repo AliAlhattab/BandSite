@@ -110,7 +110,7 @@ background-position: center;
 
     &__menu{
         display: none;
-
+        
         @include tablet{
             display: flex;
             justify-content: flex-start;
@@ -127,6 +127,7 @@ background-position: center;
     }
    
     &__date-menu{
+        font-weight: 600;
 
         @include tablet{
             width: 12.5rem;
@@ -135,6 +136,8 @@ background-position: center;
     }
 
     &__venue-menu{
+        font-weight: 600;
+
         @include tablet{
             width: 12.5rem;
             margin-bottom: 0;
@@ -142,6 +145,8 @@ background-position: center;
     }
 
     &__location-menu{
+        font-weight: 600;
+
         @include tablet{
             width: 12.5rem;
             margin-bottom: 0;

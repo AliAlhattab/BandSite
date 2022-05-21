@@ -148,11 +148,12 @@
 
 // Start of Socials
 .socials{
-    
+        
     &__title{
         margin: 0;
         padding: $mobile-headlinePadding;
         font-size: $mobile-headerSize;
+        font-weight: 600;
         
         @include tablet{
             font-size: $desktop-subFont;
