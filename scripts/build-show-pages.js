@@ -105,18 +105,23 @@ let showList = function(show){
 
 
     // converted the timestamp into real date for comments
+    let monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "July", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+    
+    let weekdayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
     let time = show.date;
     let numTime = parseInt(time)
-    console.log(numTime)
     let date = new Date(numTime);
-    let month = date.getMonth()+1;
+    let month = monthNames[date.getMonth()];
+    let weekday = weekdayNames[date.getDay()];
     let day = date.getDate();
     let year = date.getFullYear();
-    let fullDate = (month + "/" + day + "/" + year);
+    let fullDate = (weekday + " " + month + " " + day + " " + year);
 
     // date information innertext
     dateLabel.innerText = "DATE";
-    dateInfo.innerText = date;
+    dateInfo.innerText = fullDate;
 
     // venue information innertext
     venueLabel.innerText = "VENUE";
